@@ -15,24 +15,22 @@
 # SPDX-License-Identifier: Apache-2.0
 
 ---
-# Labels for action/labeler
+extends: default
 
-area/kubernetes:
-  - kubernetes/*
-  - kubernetes/**/*
+ignore: |
+  **/templates/*.yaml
 
-area/gcp:
-  - iac/gcp/*
-  - iac/gcp/**/*
-
-area/aws:
-  - iac/aws/*
-  - iac/aws/**/*
-
-area/azure:
-  - iac/azure/*
-  - iac/azure/**/*
-
-kind/documentation:
-  - docs/*
-  - docs/**/*
+rules:
+  comments:
+    min-spaces-from-content: 1
+  comments-indentation: disable
+  line-length: disable
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 0
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 0
+  indentation:
+    spaces: 2
+    indent-sequences: true # consistent
